@@ -1,29 +1,48 @@
-# Create T3 App
+# Foodbox
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+An app designed to aid with the administration of a "Food Box" scheme, such as that run by the [Granville Community Kitchen](https://granvillecommunitykitchen.org.uk/good-food-box/)
 
-## What's next? How do I make an app with this?
+## Planned Features
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+### Supplier Management
+A sort of contact book containing details of suppliers
+A record of foods each supplier provides
+The boxes they are supplying & the specific itms
+A system to track orders from suppliers.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+### Customer Management
+A system to onboard new customers
+A system to track customers & the products they are subscribed to
+Tracking payments, both cash, card and direct debit
+A system to allow customers to cancel boxes
+A system to track where and when customers plan to collect a box
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+### Communications
+A system to manage communicating the contents of each food box to a each customer
+A system to communicate outstanding balances to customers
+A system to notify of planned changes to a customer's schedule (e.g. changed pickup day or cancelled box)
 
-## Learn More
+## Design
+The project has been bootstrapped with [T3](t3.gg).
+It uses NextJs, tRPC, Typescript, NextAuth.js, Prisma, PostgreSQL and Tailwind.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+I plan to use shadcn for easy components.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+### Frontend
+The frontend will be split into two main systems...
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+#### Customer Portal
+- Onboarding
+- Subscription management
 
-## How do I deploy this?
+#### Admin Portal
+- Box administration
+- Ordering
+- Billing
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+### Backend
+Comprises of a single service due to level of load.
+
+Data stored in PostgreSQL
+
+More to come
